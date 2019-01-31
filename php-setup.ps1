@@ -1,12 +1,12 @@
 If ((Get-WMIObject win32_operatingsystem).OSArchitecture -eq '64-bit')
 {
 	$title = 'PHP Setup (64-Bit)'
-	$url = 'https://windows.php.net/downloads/releases/php-7.2.11-nts-Win32-VC15-x64.zip'
+	$url = 'https://windows.php.net/downloads/releases/php-7.3.1-Win32-VC15-x64.zip'
 }
 Else
 {
 	$title = 'PHP Setup (32-Bit)'
-	$url = 'https://windows.php.net/downloads/releases/php-7.2.11-nts-Win32-VC15-x86.zip'
+	$url = 'https://windows.php.net/downloads/releases/php-7.3.1-Win32-VC15-x86.zip'
 }
 $host.ui.RawUI.WindowTitle = $title
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
