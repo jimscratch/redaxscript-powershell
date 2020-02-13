@@ -1,12 +1,12 @@
 If ((Get-WMIObject win32_operatingsystem).OSArchitecture -eq '64-bit')
 {
 	$title = 'PostgreSQL Setup (64-Bit)'
-	$url = 'https://get.enterprisedb.com/postgresql/postgresql-10.5-2-windows-x64.exe'
+	$url = 'https://get.enterprisedb.com/postgresql/postgresql-12.1-3-windows-x64.exe'
 }
 Else
 {
 	$title = 'PostgreSQL Setup (32-Bit)'
-	$url = 'https://get.enterprisedb.com/postgresql/postgresql-10.5-2-windows.exe'
+	$url = 'https://get.enterprisedb.com/postgresql/postgresql-10.11-3-windows.exe'
 }
 $host.ui.RawUI.WindowTitle = $title
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
