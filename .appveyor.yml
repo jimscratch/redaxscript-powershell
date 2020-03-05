@@ -4,5 +4,5 @@ platform:
 - x64
 
 test_script:
+- ps: .\git-setup.ps1
 - ps: .\php-setup.ps1
-- ps: .\composer-setup.ps1
