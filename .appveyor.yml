@@ -12,4 +12,3 @@ test_script:
 - ps: .\node-setup.ps1
 - ps: .\mysql-setup.ps1
 - ps: .\postgresql-setup.ps1
-
