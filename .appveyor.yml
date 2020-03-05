@@ -6,3 +6,4 @@ platform:
 test_script:
 - ps: .\git-setup.ps1
 - ps: .\php-setup.ps1
+- ps: .\node-setup.ps1
