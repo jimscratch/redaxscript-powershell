@@ -10,7 +10,7 @@ Else
 }
 $host.ui.RawUI.WindowTitle = $title
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-[System.Environment]::SetEnvironmentVariable('PATH', $Env:Path + ';C:\PHP', 'User')
+[System.Environment]::SetEnvironmentVariable('PATH', $Env:Path + ';C:\PHP', [System.EnvironmentVariableTarget]::Machine)
 
 New-Item build -ItemType Directory -Force
 Invoke-WebRequest $url -OutFile build\php.zip
