@@ -7,4 +7,5 @@ test_script:
 - ps: .\fontforge-setup.ps1
 - ps: .\git-setup.ps1
 - ps: .\php-setup.ps1
+- ps: .\composer-setup.ps1
 - ps: .\node-setup.ps1
