@@ -12,4 +12,4 @@ $host.ui.RawUI.WindowTitle = $title
 
 New-Item build -ItemType Directory -Force
 Invoke-WebRequest $url -OutFile build\node-setup.msi
-Start-Process msiexec -ArgumentList '/i build\node-setup.msi /passive' -Wait
+Start-Process msiexec -ArgumentList '/i build\node-setup.msi /passive'
