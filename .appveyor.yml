@@ -6,8 +6,10 @@ platform:
 test_script:
 - ps: .\fontforge-setup.ps1
 - ps: .\git-setup.ps1
+- ps: .\papercut-setup.ps1
 - ps: .\php-setup.ps1
 - ps: .\composer-setup.ps1
 - ps: .\node-setup.ps1
 - ps: .\mysql-setup.ps1
 - ps: .\postgresql-setup.ps1
+- ps: .\redaxscript-setup.ps1
