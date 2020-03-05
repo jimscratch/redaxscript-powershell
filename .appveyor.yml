@@ -4,4 +4,4 @@ platform:
 - x64
 
 test_script:
-- ps: php-setup.ps1
+- ps: .\php-setup.ps1
