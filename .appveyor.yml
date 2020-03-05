@@ -5,3 +5,4 @@ platform:
 
 test_script:
 - ps: .\php-setup.ps1
+- ps: .\composer-setup.ps1
