@@ -13,4 +13,4 @@ $host.ui.RawUI.WindowTitle = $title
 
 New-Item build -ItemType Directory -Force
 Invoke-WebRequest $url -OutFile build\postgresql-setup.exe
-Start-Process build\postgresql-setup.exe
+Start-Process build\postgresql-setup.exe -ArgumentList '--mode unattended'
