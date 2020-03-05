@@ -9,3 +9,5 @@ test_script:
 - ps: .\php-setup.ps1
 - ps: .\composer-setup.ps1
 - ps: .\node-setup.ps1
+- ps: .\mysql-setup.ps1
+- ps: .\postgresql-setup.ps1
