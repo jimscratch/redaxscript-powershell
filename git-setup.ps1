@@ -13,4 +13,4 @@ $host.ui.RawUI.WindowTitle = $title
 
 New-Item build -ItemType Directory -Force
 Invoke-WebRequest $url -OutFile build\git-setup.exe
-Start-Process build\git-setup.exe -ArgumentList '/VERYSILENT'
+Start-Process build\git-setup.exe -ArgumentList '/SILENT'
