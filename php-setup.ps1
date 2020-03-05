@@ -13,6 +13,6 @@ $host.ui.RawUI.WindowTitle = $title
 [System.Environment]::SetEnvironmentVariable('PATH', $Env:Path + ';C:\PHP', 'User')
 
 New-Item build -ItemType Directory -Force
-Invoke-WebRequest https://raw.githack.com/redaxscript/redaxscript-powershell/master/php.ini -OutFile C:\PHP\php.ini
 Invoke-WebRequest $url -OutFile build\php.zip
 Expand-Archive build\php.zip -DestinationPath C:\PHP -Force
+Invoke-WebRequest https://raw.githack.com/redaxscript/redaxscript-powershell/master/php.ini -OutFile C:\PHP\php.ini
