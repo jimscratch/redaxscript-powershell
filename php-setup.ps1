@@ -12,7 +12,9 @@ $host.ui.RawUI.WindowTitle = $title
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 [System.Environment]::SetEnvironmentVariable('PATH', $Env:Path + ';C:\PHP', 'User')
 
+New-Item C:\PHP -ItemType Directory -Force
+Invoke-WebRequest https://raw.githubusercontent.com/redaxscript/redaxscript-powershell/master/php.ini -OutFile C:\PHP\php.ini
+
 New-Item build -ItemType Directory -Force
 Invoke-WebRequest $url -OutFile build\php.zip
 Expand-Archive build\php.zip -DestinationPath C:\PHP -Force
-Invoke-WebRequest https://raw.githubusercontent.com/redaxscript/redaxscript-powershell/master/php.ini -OutFile C:\PHP\php.ini
