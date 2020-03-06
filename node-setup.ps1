@@ -10,6 +10,9 @@ Else
 }
 $host.ui.RawUI.WindowTitle = $title
 
-New-Item build -ItemType Directory -Force
-Invoke-WebRequest $url -OutFile build\node-setup.msi
-Start-Process msiexec -ArgumentList '/i build\node-setup.msi /passive'
+New-Item C:\build -ItemType Directory -Force
+if (!(Test-Path C:\build\node-setup.msi))
+{
+	Invoke-WebRequest $url -OutFile C:\build\node-setup.msi
+}
+Start-Process msiexec -Wait -ArgumentList '/i C:\build\node-setup.msi /passive'
