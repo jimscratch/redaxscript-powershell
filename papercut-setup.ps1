@@ -8,4 +8,4 @@ if (!(Test-Path C:\build\papercut.zip))
 }
 Expand-Archive C:\build\papercut.zip -DestinationPath C:\Papercut -Force
 Start-Process C:\Papercut\Papercut.Service.exe -Wait -ArgumentList 'install --sudo'
-
+Start-Process C:\Papercut\Papercut.Service.exe -Wait -ArgumentList 'start'
