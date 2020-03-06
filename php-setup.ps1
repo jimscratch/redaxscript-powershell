@@ -12,8 +12,11 @@ $host.ui.RawUI.WindowTitle = $title
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 [System.Environment]::SetEnvironmentVariable('PATH', $Env:Path + ';C:\PHP', [System.EnvironmentVariableTarget]::Machine)
 
-New-Item build -ItemType Directory -Force
-Invoke-WebRequest $url -OutFile build\php.zip
-Expand-Archive build\php.zip -DestinationPath C:\PHP -Force
+New-Item C:\build -ItemType Directory -Force
+if (!(Test-Path C:\build\php.zip))
+{
+	Invoke-WebRequest $url -OutFile C:\build\php.zip
+}
+Expand-Archive C:\build\php.zip -DestinationPath C:\PHP -Force
 
 Invoke-WebRequest https://raw.githubusercontent.com/redaxscript/redaxscript-powershell/master/php.ini -OutFile C:\PHP\php.ini
