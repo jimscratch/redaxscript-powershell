@@ -11,6 +11,9 @@ Else
 $host.ui.RawUI.WindowTitle = $title
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-New-Item build -ItemType Directory -Force
-Invoke-WebRequest $url -OutFile build\git-setup.exe
-Start-Process build\git-setup.exe -ArgumentList '/SILENT'
+New-Item C:\build -ItemType Directory -Force
+if (!(Test-Path C:\build\git-setup.exe))
+{
+	Invoke-WebRequest $url -OutFile C:\build\git-setup.exe
+}
+Start-Process C:\build\git-setup.exe -ArgumentList '/SILENT'
