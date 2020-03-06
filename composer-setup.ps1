@@ -1,7 +1,7 @@
 $host.ui.RawUI.WindowTitle = 'Composer Setup'
 
 New-Item C:\build -ItemType Directory -Force
-if (!(Test-Path C:\build\fontforge-setup.exe))
+if (!(Test-Path C:\build\composer-setup.exe))
 {
 	Invoke-WebRequest https://getcomposer.org/Composer-Setup.exe -OutFile C:\build\composer-setup.exe
 }
