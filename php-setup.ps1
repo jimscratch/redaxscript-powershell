@@ -17,6 +17,8 @@ if (!(Test-Path C:\build\php.zip))
 {
 	Invoke-WebRequest $url -OutFile C:\build\php.zip
 }
-Expand-Archive C:\build\php.zip -DestinationPath C:\PHP -Force
-
+if (!(Test-Path C:\PHP))
+{
+	Expand-Archive C:\build\php.zip -DestinationPath C:\PHP -Force
+}
 Invoke-WebRequest https://raw.githubusercontent.com/redaxscript/redaxscript-powershell/master/php.ini -OutFile C:\PHP\php.ini
