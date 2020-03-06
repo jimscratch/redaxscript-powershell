@@ -16,4 +16,4 @@ if (!(Test-Path C:\build\git-setup.exe))
 {
 	Invoke-WebRequest $url -OutFile C:\build\git-setup.exe
 }
-Start-Process C:\build\git-setup.exe -ArgumentList '/SILENT'
+Start-Process C:\build\git-setup.exe -Wait -ArgumentList '/SILENT'
