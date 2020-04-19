@@ -7,13 +7,6 @@ install:
 
 jobs:
  include:
- - &git
-   env:
-   - GIT
-
-   script:
-   - travis_wait 20 powershell -File git-setup.ps1
-
  - &node
    env:
    - NODE
