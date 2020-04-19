@@ -1,0 +1,64 @@
+os: windows
+
+language: shell
+
+install:
+- powershell -Command 'Set-ExecutionPolicy -ExecutionPolicy RemoteSigned'
+
+jobs:
+ include:
+ - &git
+   env:
+   - GIT
+
+   script:
+   - travis_wait 20 powershell -File git-setup.ps1
+
+ - &node
+   env:
+   - NODE
+
+   script:
+   - powershell -File node-setup.ps1
+
+ - &fontforge
+   env:
+   - FONTFORGE
+
+   script:
+   - powershell -File fontforge-setup.ps1
+
+ - &php
+   env:
+   - PHP
+
+   script:
+   - powershell -File php-setup.ps1
+
+ - &composer
+   env:
+   - COMPOSER
+
+   script:
+   - powershell -File composer-setup.ps1
+
+ - &mysql
+   env:
+   - MYSQL
+
+   script:
+   - powershell -File mysql-setup.ps1
+
+ - &postgresql
+   env:
+   - POSTGRESQL
+
+   script:
+   - powershell -File postgresql-setup.ps1
+
+ - &papercut
+   env:
+   - PAPERCUT
+
+   script:
+   - powershell -File papercut-setup.ps1
