@@ -3,7 +3,7 @@ os: windows
 language: shell
 
 install:
-- powershell -Command 'Set-ExecutionPolicy -ExecutionPolicy RemoteSigned'
+- powershell -Command 'Set-ExecutionPolicy -ExecutionPolicy Unrestricted'
 
 jobs:
  include:
