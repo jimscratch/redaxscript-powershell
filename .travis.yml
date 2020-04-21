@@ -2,7 +2,7 @@ os: windows
 
 language: shell
 
-install:
+before_install:
 - powershell -Command 'Set-ExecutionPolicy -ExecutionPolicy Unrestricted'
 
 jobs:
