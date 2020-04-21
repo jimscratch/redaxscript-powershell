@@ -4,6 +4,7 @@ language: shell
 
 before_install:
 - powershell -Command 'Set-ExecutionPolicy -ExecutionPolicy Unrestricted'
+- set -m
 
 jobs:
  include:
