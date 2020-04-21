@@ -11,47 +11,59 @@ jobs:
    env:
    - NODE
 
-   script:
+   install:
    - powershell -File node-setup.ps1
+   
+   script:
+   - node --version
 
  - &fontforge
    env:
    - FONTFORGE
 
-   script:
+   install:
    - powershell -File fontforge-setup.ps1
+   
+   script:
+   - fontforge --version
 
  - &php
    env:
    - PHP
 
-   script:
+   install:
    - powershell -File php-setup.ps1
+   
+   script:
+   - php --version
 
  - &composer
    env:
    - COMPOSER
 
-   script:
+   install:
    - powershell -File composer-setup.ps1
+   
+   script:
+   - composer --version
 
  - &mysql
    env:
    - MYSQL
 
-   script:
+   install:
    - powershell -File mysql-setup.ps1
 
  - &postgresql
    env:
    - POSTGRESQL
 
-   script:
+   install:
    - powershell -File postgresql-setup.ps1
 
  - &papercut
    env:
    - PAPERCUT
 
-   script:
+   install:
    - powershell -File papercut-setup.ps1
