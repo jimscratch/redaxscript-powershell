@@ -23,7 +23,7 @@ jobs:
 
    install:
    - powershell -File fontforge-setup.ps1
-   
+
    script:
    - fontforge --version
 
@@ -33,7 +33,8 @@ jobs:
 
    install:
    - powershell -File php-setup.ps1
-   
+   - export PATH=C:\PHP;%PATH%
+
    script:
    - php --version
 
@@ -43,7 +44,7 @@ jobs:
 
    install:
    - powershell -File composer-setup.ps1
-   
+
    script:
    - composer --version
 
