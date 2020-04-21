@@ -4,7 +4,6 @@ language: shell
 
 before_install:
 - powershell -Command 'Set-ExecutionPolicy -ExecutionPolicy Unrestricted'
-- set -m
 
 jobs:
  include:
@@ -14,9 +13,6 @@ jobs:
 
    install:
    - powershell -File node-setup.ps1
-   
-   script:
-   - node --version
 
  - &fontforge
    env:
@@ -25,19 +21,12 @@ jobs:
    install:
    - powershell -File fontforge-setup.ps1
 
-   script:
-   - fontforge --version
-
  - &php
    env:
    - PHP
 
    install:
    - powershell -File php-setup.ps1
-   - export PATH=C:\PHP;%PATH%
-
-   script:
-   - php --version
 
  - &composer
    env:
@@ -45,9 +34,6 @@ jobs:
 
    install:
    - powershell -File composer-setup.ps1
-
-   script:
-   - composer --version
 
  - &mysql
    env:
