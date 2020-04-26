@@ -4,7 +4,7 @@ $host.ui.RawUI.WindowTitle = 'Papercut Setup'
 New-Item C:\build -ItemType Directory -Force
 if (!(Test-Path C:\build\papercut.zip))
 {
-	Invoke-WebRequest https://github.com/ChangemakerStudios/Papercut/releases/download/5.5.1/PapercutService.5.5.1.zip -Outfile C:\build\papercut.zip
+	Invoke-WebRequest https://github.com/ChangemakerStudios/Papercut/releases/download/5.7.0/PapercutService.5.7.0.zip -Outfile C:\build\papercut.zip
 }
 if (!(Test-Path C:\Papercut))
 {
