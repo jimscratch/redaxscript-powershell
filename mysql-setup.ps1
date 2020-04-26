@@ -10,9 +10,9 @@ Else
 }
 $host.ui.RawUI.WindowTitle = $title
 
-New-Item C:\build -ItemType Directory -Force
-if (!(Test-Path C:\build\mysql-setup.msi))
+New-Item C:\Build -ItemType Directory -Force
+if (!(Test-Path C:\Build\mysql-setup.msi))
 {
-	Invoke-WebRequest $url -OutFile C:\build\mysql-setup.msi
+	Invoke-WebRequest $url -OutFile C:\Build\mysql-setup.msi
 }
-Start-Process msiexec -Wait -ArgumentList '/i C:\build\mysql-setup.msi /passive'
+Start-Process msiexec -Wait -ArgumentList '/i C:\Build\mysql-setup.msi /passive'

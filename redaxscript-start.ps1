@@ -1,3 +1,3 @@
 $host.ui.RawUI.WindowTitle = 'Redaxscript Start'
 
-Start-Process grunt -ArgumentList 'serve -O' -WorkingDirectory C:\redaxscript
+Start-Process grunt -ArgumentList 'serve -O' -WorkingDirectory C:\Redaxscript

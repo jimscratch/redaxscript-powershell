@@ -11,9 +11,9 @@ Else
 $host.ui.RawUI.WindowTitle = $title
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-New-Item C:\build -ItemType Directory -Force
-if (!(Test-Path C:\build\postgresql-setup.exe))
+New-Item C:\Build -ItemType Directory -Force
+if (!(Test-Path C:\Build\postgresql-setup.exe))
 {
-	Invoke-WebRequest $url -OutFile C:\build\postgresql-setup.exe
+	Invoke-WebRequest $url -OutFile C:\Build\postgresql-setup.exe
 }
-Start-Process C:\build\postgresql-setup.exe -Wait -ArgumentList '--mode unattended'
+Start-Process C:\Build\postgresql-setup.exe -Wait -ArgumentList '--mode unattended'
