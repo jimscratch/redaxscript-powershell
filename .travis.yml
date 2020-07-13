@@ -14,13 +14,6 @@ jobs:
    install:
    - powershell -File node-setup.ps1
 
- - &fontforge
-   env:
-   - FONTFORGE
-
-   install:
-   - powershell -File fontforge-setup.ps1
-
  - &php
    env:
    - PHP
