@@ -9,6 +9,8 @@ Else
 	$url = 'https://nodejs.org/dist/v14.5.0/node-v14.5.0-x86.msi'
 }
 $host.ui.RawUI.WindowTitle = $title
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+[System.Environment]::SetEnvironmentVariable('PATH', $Env:Path + ';C:\Program Files\nodejs', [System.EnvironmentVariableTarget]::Machine)
 
 New-Item C:\Build -ItemType Directory -Force
 if (!(Test-Path C:\Build\node-setup.msi))
