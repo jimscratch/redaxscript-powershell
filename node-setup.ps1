@@ -11,6 +11,7 @@ Else
 $host.ui.RawUI.WindowTitle = $title
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 [System.Environment]::SetEnvironmentVariable('PATH', $Env:Path + ';C:\Program Files\nodejs', [System.EnvironmentVariableTarget]::Machine)
+$env:Path = [System.Environment]::GetEnvironmentVariable('Path', 'Machine')
 
 New-Item C:\Build -ItemType Directory -Force
 if (!(Test-Path C:\Build\node-setup.msi))
