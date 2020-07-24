@@ -4,5 +4,8 @@ Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://pow
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/runtime-setup.ps1'))
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/php-setup.ps1'))
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/composer-setup.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/mysql-setup.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/postgresql-setup.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/papercut-setup.ps1'))
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/redaxscript-setup.ps1'))
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/redaxscript-start.ps1'))
