@@ -1,0 +1,8 @@
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/git-setup.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/node-setup.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/grunt-setup.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/runtime-setup.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/php-setup.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/composer-setup.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/redaxscript-setup.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powershell.redaxscript.com/redaxscript-start.ps1'))
