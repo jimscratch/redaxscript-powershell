@@ -1,12 +1,12 @@
-If ((Get-WMIObject win32_operatingsystem).OSArchitecture -eq '64-bit')
+If ((Get-CimInStance CIM_OperatingSystem).OSArchitecture -eq '64-bit')
 {
 	$title = 'Node Setup (64-Bit)'
-	$url = 'https://nodejs.org/dist/v14.5.0/node-v14.5.0-x64.msi'
+	$url = 'https://nodejs.org/dist/v14.15.1/node-v14.15.1-x64.msi'
 }
 Else
 {
 	$title = 'Node Setup (32-Bit)'
-	$url = 'https://nodejs.org/dist/v14.5.0/node-v14.5.0-x86.msi'
+	$url = 'https://nodejs.org/dist/v14.15.1/node-v14.15.1-x86.msi'
 }
 $host.ui.RawUI.WindowTitle = $title
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12

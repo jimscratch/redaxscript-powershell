@@ -1,0 +1,15 @@
+name: ci
+
+on: [ push, pull_request ]
+
+jobs:
+ test:
+  runs-on: windows-latest
+  strategy:
+   matrix:
+    file: [ node-setup.ps1, grunt-setup.ps1, runtime-setup.ps1, php-setup.ps1, composer-setup.ps1, mysql-setup.ps1, postgresql-setup.ps1, papercut-setup.ps1 ]
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+  - run: ./${{ matrix.file }} -ErrorAction Stop
+    shell: pwsh

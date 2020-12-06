@@ -1,4 +1,4 @@
-If ((Get-WMIObject win32_operatingsystem).OSArchitecture -eq '64-bit')
+If ((Get-CimInStance CIM_OperatingSystem).OSArchitecture -eq '64-bit')
 {
 	$title = 'PHP Setup (64-Bit)'
 	$url = 'https://windows.php.net/downloads/releases/latest/php-7.4-Win32-VC15-x64-latest.zip'

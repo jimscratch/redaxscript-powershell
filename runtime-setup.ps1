@@ -1,4 +1,4 @@
-If ((Get-WMIObject win32_operatingsystem).OSArchitecture -eq '64-bit')
+If ((Get-CimInStance CIM_OperatingSystem).OSArchitecture -eq '64-bit')
 {
 	$title = 'Runtime Setup (64-Bit)'
 	$url = 'https://aka.ms/vs/16/release/VC_redist.x64.exe'

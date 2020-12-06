@@ -1,12 +1,12 @@
-If ((Get-WMIObject win32_operatingsystem).OSArchitecture -eq '64-bit')
+If ((Get-CimInStance CIM_OperatingSystem).OSArchitecture-eq '64-bit')
 {
 	$title = 'Git Setup (64-Bit)'
-	$url = 'https://github.com/git-for-windows/git/releases/download/v2.27.0.windows.1/Git-2.27.0-64-bit.exe'
+	$url = 'https://github.com/git-for-windows/git/releases/download/v2.29.2.windows.2/Git-2.29.2.2-64-bit.exe'
 }
 Else
 {
 	$title = 'Git Setup (32-Bit)'
-	$url = 'https://github.com/git-for-windows/git/releases/download/v2.27.0.windows.1/Git-2.27.0-32-bit.exe'
+	$url = 'https://github.com/git-for-windows/git/releases/download/v2.29.2.windows.2/Git-2.29.2.2-32-bit.exe'
 }
 $host.ui.RawUI.WindowTitle = $title
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
